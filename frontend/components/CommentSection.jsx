@@ -27,16 +27,18 @@ const CommentSection = () => {
 
   const handleSendComment = (parentId = null) => {
     if (!inputValue.trim()) return;
-
+  
     const newComment = {
       id: Date.now(),
       user: "currentUser",
       profilePic: "https://via.placeholder.com/40",
-      text: inputValue,
+      text: parentId
+        ? `@${findComment(comments, parentId)?.user || "unknown"} ${inputValue}`
+        : inputValue,
       time: "just now",
       replies: [],
     };
-
+  
     if (parentId) {
       setComments((prev) =>
         prev.map((comment) =>
@@ -48,11 +50,12 @@ const CommentSection = () => {
     } else {
       setComments((prev) => [...prev, newComment]);
     }
-
+  
     setReplyingTo(null);
     setEditing(null);
     setInputValue("");
   };
+  
 
   const handleEditComment = (commentId) => {
     setEditing(commentId);

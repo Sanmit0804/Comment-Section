@@ -53,6 +53,17 @@ h3 {
 .comment {
   display: flex;
   margin-bottom: 15px;
+  position: relative;
+}
+
+.comment::before {
+  content: "";
+  position: absolute;
+  left: 20px; /* Align with the center of profile picture */
+  top: 60px; /* Adjust for spacing between profile picture and the next comment */
+  bottom: 0;
+  width: 1px;
+  background-color: #ccc; /* Line color */
 }
 
 .profile-pic {
