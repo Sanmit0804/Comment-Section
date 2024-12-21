@@ -45,7 +45,7 @@ const EmojiSelector = () => {
           />
           <button
             className="input-box-emoji"
-            onClick={() => setIsPickerVisible(!isPickerVisible)}
+            onClick={() => setIsPickerVisible(true)}
           >
             🙂
           </button>
