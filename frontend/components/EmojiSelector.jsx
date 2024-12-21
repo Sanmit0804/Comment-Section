@@ -1,4 +1,4 @@
-// npm install emoji-mart Oemoji-mart/data Oemoji-mart/react
+// npm install emoji-mart @emoji-mart/data @emoji-mart/react
 
 import React, { useState, useEffect, useRef } from "react";
 import "./EmojiSelector.scss";
