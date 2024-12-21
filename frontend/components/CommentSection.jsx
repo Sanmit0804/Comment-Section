@@ -56,7 +56,6 @@ const CommentSection = () => {
     setInputValue("");
   };
   
-
   const handleEditComment = (commentId) => {
     setEditing(commentId);
     const editingComment = findComment(comments, commentId);
@@ -167,6 +166,7 @@ const CommentSection = () => {
           onKeyDown={(e) => e.key === "Enter" && handleSendComment()}
         />
         <div className="icons">
+          <button>🙂</button>
           <button className="send-btn" onClick={() => handleSendComment()}>
             ➤
           </button>

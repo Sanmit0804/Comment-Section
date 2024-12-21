@@ -1,0 +1,85 @@
+.container {
+    text-align: center;
+    padding: 20px;
+  
+    .input-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+  
+      .input-box {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        width: 400px;
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+        .input-box-bar {
+          width: 70%;
+          padding: 10px;
+          border: none;
+          outline: none;
+          font-size: 16px;
+        }
+  
+        .input-box-emoji {
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          font-size: 20px;
+          padding: 5px;
+          transition: transform 0.2s ease;
+  
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+  
+        .input-box-post {
+          border: none;
+          background-color: #ff5100;
+          color: white;
+          font-size: 16px;
+          font-weight: bold;
+          padding: 10px 15px;
+          cursor: pointer;
+          border-radius: 0 8px 8px 0;
+          transition: background-color 0.2s ease;
+  
+          &:hover {
+            background-color: #e04800;
+          }
+        }
+  
+        .emoji-picker {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          z-index: 100;
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          background-color: #fff;
+        }
+      }
+    }
+  
+    .texts-container {
+      margin-top: 30px;
+  
+      .text-item {
+        margin: 5px 0;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+    }
+  }
+  
